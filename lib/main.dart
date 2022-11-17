@@ -1,4 +1,5 @@
-import 'package:tutorial6/form.dart';
+import 'package:tutorial6/page/form.dart';
+import 'package:tutorial6/page/to_do_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -60,6 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: [
             // Menambahkan clickable menu
+            // Menambahkan clickable menu
             ListTile(
               title: const Text('Counter'),
               onTap: () {
@@ -77,6 +79,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => const MyFormPage()),
+                );
+              },
+            ),
+            ListTile(
+              title: const Text('ToDo'),
+              onTap: () {
+                // Route menu ke halaman to do
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ToDoPage()),
                 );
               },
             ),
